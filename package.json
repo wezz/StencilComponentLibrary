@@ -1,0 +1,33 @@
+{
+  "name": "stencilstorybookcomponentlibrary",
+  "version": "1.0.0",
+  "description": "A stencil.js component library with Storybook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wezz/StencilStorybookComponentLibrary.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wezz/StencilStorybookComponentLibrary/issues"
+  },
+  "homepage": "https://github.com/wezz/StencilStorybookComponentLibrary#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@storybook/addon-actions": "^6.5.14",
+    "@storybook/addon-essentials": "^6.5.14",
+    "@storybook/addon-links": "^6.5.14",
+    "@storybook/builder-vite": "^0.2.5",
+    "@storybook/web-components": "^6.5.14",
+    "babel-loader": "^8.3.0",
+    "lit-html": "^2.4.0",
+    "vite": "^3.2.5"
+  }
+}
