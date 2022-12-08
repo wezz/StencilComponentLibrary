@@ -11,8 +11,10 @@
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/components/components.esm.js",
   "scripts": {
-    "build": "stencil build --docs",
-    "start": "stencil build --dev --watch --serve",
+    "start": "npm-run-all --parallel stencil:watch storybook -s ./",
+    "build": "npm-run-all --parallel stencil build --docs build-storybook",
+    "build-stencil": "stencil build --docs",
+    "start-stencil": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
@@ -34,11 +36,11 @@
     "url": "https://github.com/wezz/StencilStorybookComponentLibrary/issues"
   },
   "homepage": "https://github.com/wezz/StencilStorybookComponentLibrary#readme",
-  "dependencies": {
-    "@stencil/core": "^3.0.0-alpha.1"
-  },
   "devDependencies": {
     "@babel/core": "^7.20.5",
+    "@stencil/core": "^3.0.0-alpha.1",
+    "@stencil/sass": "^2.0.1",
+    "@stencil/store": "^2.0.1",
     "@storybook/addon-actions": "^6.5.14",
     "@storybook/addon-essentials": "^6.5.14",
     "@storybook/addon-links": "^6.5.14",
@@ -46,6 +48,8 @@
     "@storybook/web-components": "^6.5.14",
     "@types/jest": "^27.0.3",
     "babel-loader": "^8.3.0",
+    "cross-env": "^7.0.3",
+    "fs-extra": "^11.1.0",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
     "lit-html": "^2.4.0",

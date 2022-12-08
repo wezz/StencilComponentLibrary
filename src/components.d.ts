@@ -7,18 +7,12 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "counter": number;
+        "heading": string;
+    }
+    interface MyShadowComponent {
+        "counter": number;
+        "heading": string;
     }
 }
 declare global {
@@ -28,27 +22,29 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLMyShadowComponentElement extends Components.MyShadowComponent, HTMLStencilElement {
+    }
+    var HTMLMyShadowComponentElement: {
+        prototype: HTMLMyShadowComponentElement;
+        new (): HTMLMyShadowComponentElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "my-shadow-component": HTMLMyShadowComponentElement;
     }
 }
 declare namespace LocalJSX {
     interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "counter"?: number;
+        "heading"?: string;
+    }
+    interface MyShadowComponent {
+        "counter"?: number;
+        "heading"?: string;
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "my-shadow-component": MyShadowComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +52,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-shadow-component": LocalJSX.MyShadowComponent & JSXBase.HTMLAttributes<HTMLMyShadowComponentElement>;
         }
     }
 }
