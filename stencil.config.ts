@@ -1,4 +1,5 @@
 import { Config } from '@stencil/core';
+import { sass } from "@stencil/sass";
 
 export const config: Config = {
   namespace: 'components',
@@ -9,6 +10,7 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
+      customElementsExportBehavior: 'default'
     },
     {
       type: 'docs-readme',
@@ -18,4 +20,11 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
+  plugins: [sass()],
+  buildEs5: 'prod',
+  extras: {
+    safari10: true,
+    slotChildNodesFix:true,
+    cloneNodeFix:true,
+  }
 };
