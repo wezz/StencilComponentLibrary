@@ -1,6 +1,10 @@
+:root {
+  --my-component-background:#ccc;
+}
 :host {
   display: inline-block;
   border:1px solid black;
   padding:8px;
   border-radius: 3px;
+  background:var(--my-component-background);
 }
