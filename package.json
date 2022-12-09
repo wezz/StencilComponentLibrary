@@ -1,5 +1,5 @@
 {
-  "name": "stencilcomponentlibrary",
+  "name": "@wezz/stencilcomponentlibrary",
   "version": "0.0.1",
   "description": "A stencil component library with storybook",
   "main": "dist/index.cjs.js",
@@ -20,7 +20,8 @@
     "stencil-test-watch": "cross-env stencil test --spec --e2e --watchAll",
     "stencil-generate": "cross-env stencil generate",
     "storybook-start": "cross-env start-storybook -p 6006",
-    "storybook-build": "cross-env build-storybook"
+    "storybook-build": "cross-env build-storybook",
+    "trypublish": "npm publish --access public || true"
   },
   "repository": {
     "type": "git",
