@@ -1,7 +1,7 @@
 :root {
   --my-component-background:#ccc;
 }
-:host {
+MyComponent {
   display: inline-block;
   border:1px solid black;
   padding:8px;
