@@ -5,7 +5,10 @@
 :host {
   display: inline-block;
   border:1px solid black;
-  padding:8px;
-  border-radius: 3px;
+  padding:16px;
+  border-radius: 4px;
   background:var(--my-shadow-component-background);
+  h4 {
+    margin:0 0 .5em;
+  }
 }

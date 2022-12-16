@@ -1,10 +1,13 @@
 :root {
-  --my-component-background:#ccc;
+  --my-component-background:#eee;
 }
-MyComponent {
+my-component {
   display: inline-block;
   border:1px solid black;
-  padding:8px;
-  border-radius: 3px;
+  padding:16px;
+  border-radius: 4px;
   background:var(--my-component-background);
+  h4 {
+    margin:0 0 .5em;
+  }
 }
