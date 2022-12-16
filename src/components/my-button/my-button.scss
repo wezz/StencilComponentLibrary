@@ -1,0 +1,38 @@
+:root {
+  --my-button-border:#333;
+  --my-button-textcolor:#000;
+  --my-button-border-radius:8px;
+  --my-button-background:#fff;
+  --my-button-fontweight:400;
+  --my-button-text-decoration:none;
+
+  --my-button-hover-border:#000;
+  --my-button-hover-textcolor:#000;
+  --my-button-hover-background:#eee;
+  --my-button-hover-fontweight:700;
+  --my-button-hover-text-decoration:underline;
+}
+my-button {
+  display:inline-block;
+}
+my-button > button,
+my-button > a {
+  display: inline-block;
+  padding:8px;
+  border-radius: var(--my-button-border-radius);
+  border:1px solid var(--my-button-border);
+  color:var(--my-button-textcolor);
+  background:var(--my-button-background);
+  font-weight: --my-button-fontweight;
+  text-decoration: var(--my-button-text-decoration);
+  transition: all .15s ease;
+  &:hover,
+  &:focus,
+  &:active {
+    border:1px solid var(--my-button-hover-border);
+    color:var(--my-button-hover-textcolor);
+    background:var(--my-button-hover-background);
+    font-weight: --my-button-hover-fontweight;
+    text-decoration: var(--my-button-hover-text-decoration);
+  }
+}
