@@ -1,8 +1,8 @@
-:root {
-  --my-shadow-component-background:#ccc;
-}
+
 
 :host {
+  --my-shadow-component-background:#ccc;
+  
   display: inline-block;
   border:1px solid black;
   padding:16px;

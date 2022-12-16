@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h, Host } from '@stencil/core';
 
 @Component({
   tag: 'my-shadow-component',
@@ -17,12 +17,12 @@ export class MyShadowComponent {
 
   render() {
     return (
-      <div>
+      <Host>
         <h4>{this.heading}</h4>
         <slot/>
         <p>Counter: { this.counter }</p>
         <button onClick={this.increaseCounter.bind(this)}>Increase</button>
-      </div>
+      </Host>
     );
   }
 }
