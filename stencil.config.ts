@@ -26,5 +26,6 @@ export const config: Config = {
     safari10: true,
     slotChildNodesFix:true,
     cloneNodeFix:true,
+    experimentalImportInjection: true
   }
 };
