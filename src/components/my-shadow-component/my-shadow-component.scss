@@ -1,14 +1,15 @@
 
 
 :host {
-  --my-shadow-component-background:#ccc;
-  
-  display: inline-block;
-  border:1px solid black;
-  padding:16px;
-  border-radius: 4px;
-  background:var(--my-shadow-component-background);
-  h4 {
-    margin:0 0 .5em;
+  > div {
+    display: inline-block;
+    border:1px solid black;
+    padding:16px;
+    border-radius: 4px;
+    background:var(--my-shadow-component-background, #ccc);
+    color:var(--my-shadow-component-textcolor, #000);
+    h4 {
+      margin:0 0 .5em;
+    }
   }
 }

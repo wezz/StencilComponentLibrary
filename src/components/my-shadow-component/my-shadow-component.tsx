@@ -17,12 +17,12 @@ export class MyShadowComponent {
 
   render() {
     return (
-      <Host>
+      <div>
         <h4>{this.heading}</h4>
         <slot/>
         <p>Counter: { this.counter }</p>
         <button onClick={this.increaseCounter.bind(this)}>Increase</button>
-      </Host>
+      </div>
     );
   }
 }
